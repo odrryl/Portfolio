@@ -1,0 +1,25 @@
+// breakpoints
+$desktop-small: 1200px;
+$tablet: 995px;
+$tablet-small: 770px;
+$mobile: 576px;
+
+:root {
+	--font-family: "JetBrains Mono", monospace;
+	--second-family: "Roboto", sans-serif;
+
+	--transition: .2s all ease-in-out;
+
+	--primary-color: #1F1F1F;
+	--secondary-color: #262626;
+
+	--accent-color: #EE7107;
+	--hover-bg-color: #DF7B25;
+	
+	--txt-color: #FEFEFE;
+
+	--white: #fff;
+	--black: #000;
+
+
+}

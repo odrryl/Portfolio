@@ -1,0 +1,85 @@
+.services {
+  &__container {
+    flex-direction: column;
+  }
+
+  &__group {
+    display: flex;
+    gap: 85rem;
+
+    @include desktop-small {
+      gap: 45rem;
+    }
+    @include tablet {
+      gap: 35rem;
+    }
+    @include tablet-small {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 25rem;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 35px 0 rgba(23, 23, 23, 0.25);
+    background: var(--secondary-color);
+    padding: 85rem 45rem 65rem 45rem;
+    transition: background-color 0.5s ease-in-out;
+
+    @include desktop-small {
+      padding: 65rem 25rem 45rem 25rem;
+    }
+
+    @include tablet {
+      padding: 45rem 20rem 35rem 20rem;
+    }
+
+    &-title {
+      font-family: var(--second-family);
+      font-weight: 700;
+      font-size: 26rem;
+      line-height: 135%;
+      text-align: center;
+      margin-top: 20rem;
+
+      @include tablet {
+        font-size: 18rem;
+      }
+
+      @include mobile {
+        font-size: 16rem;
+      }
+    }
+
+    &-desc {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 18rem;
+      text-align: center;
+      margin-top: 5rem;
+      max-width: 254rem;
+
+      @include tablet {
+        font-size: 14rem;
+      }
+
+      @include mobile {
+        font-size: 12rem;
+      }
+    }
+  }
+
+  &__block:hover {
+    box-shadow: 0 0 35px 0 rgba(238, 113, 7, 0.37);
+    background: var(--hover-bg-color);
+  }
+
+  &__block:hover .icon {
+    filter: brightness(0) invert(1);
+  }
+}
