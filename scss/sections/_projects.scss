@@ -99,6 +99,10 @@
       font-size: 18rem;
       margin-top: 5rem;
 
+      span{
+        color: var(--accent-color);
+      }
+
       @include mobile {
         font-size: 14rem;
       }
