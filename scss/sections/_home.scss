@@ -79,7 +79,6 @@
   }
 
   &__btn {
-
     animation: pulse 2s infinite;
 
     @keyframes pulse {
@@ -157,5 +156,6 @@
 
   @include mobile {
     font-size: 18rem;
+    min-width: 220rem;
   }
 }

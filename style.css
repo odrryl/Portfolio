@@ -144,8 +144,8 @@ body {
   --font-family: "JetBrains Mono", monospace;
   --second-family: "Roboto", sans-serif;
   --transition: .2s all ease-in-out;
-  --primary-color: #1F1F1F;
-  --secondary-color: #262626;
+  --primary-color: #1e1d1d;
+  --secondary-color: #232222;
   --accent-color: #EE7107;
   --hover-bg-color: #DF7B25;
   --txt-color: #FEFEFE;
@@ -435,38 +435,38 @@ a {
   padding: 0 10px 10px;
 }
 
-.roll-in-blurred-right {
-  -webkit-animation: roll-in-blurred-right 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation: roll-in-blurred-right 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+.roll-in-blurred-top {
+  -webkit-animation: roll-in-blurred-top 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation: roll-in-blurred-top 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
-@-webkit-keyframes roll-in-blurred-right {
+@-webkit-keyframes roll-in-blurred-top {
   0% {
-    -webkit-transform: translateX(1000px) rotate(720deg);
-    transform: translateX(1000px) rotate(720deg);
+    -webkit-transform: translateY(-800px) rotate(-720deg);
+    transform: translateY(-800px) rotate(-720deg);
     -webkit-filter: blur(50px);
     filter: blur(50px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0) rotate(0deg);
-    transform: translateX(0) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     -webkit-filter: blur(0);
     filter: blur(0);
     opacity: 1;
   }
 }
-@keyframes roll-in-blurred-right {
+@keyframes roll-in-blurred-top {
   0% {
-    -webkit-transform: translateX(1000px) rotate(720deg);
-    transform: translateX(1000px) rotate(720deg);
+    -webkit-transform: translateY(-800px) rotate(-720deg);
+    transform: translateY(-800px) rotate(-720deg);
     -webkit-filter: blur(50px);
     filter: blur(50px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0) rotate(0deg);
-    transform: translateX(0) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     -webkit-filter: blur(0);
     filter: blur(0);
     opacity: 1;
@@ -841,6 +841,7 @@ a {
 @media (max-width: 576px) {
   .position {
     font-size: 18rem;
+    min-width: 220rem;
   }
 }
 
