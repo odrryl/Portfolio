@@ -1,0 +1,23 @@
+// breakpoints
+$desktop-small: 1200px;
+$tablet: 995px;
+$tablet-small: 770px;
+$mobile: 576px;
+
+:root {
+	// FONTS
+	--font-family: "JetBrains Mono", monospace;
+	--second-family: "Roboto", sans-serif;
+
+	// TRANSITIONS
+	--transition: 0.2s all ease-in-out;
+	--transition-header: transform 0.3s ease, opacity 0.3s ease;
+
+	// COLORS
+	--primary-color: #050505;
+	--accent-color-primary: #d9543a;
+	--accent-color-secondary: #6097ca;
+	--txt-color: #fefefe;
+	--white: #fff;
+	--black: #000;
+}

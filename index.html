@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio</title>
+		<link rel="icon" type="image/x-icon" href="img/icons/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<header class="header" id="home">
+			<div class="container header__container">
+				<a class="logo" href="#home">< odrryl /></a>
+				<div class="header__nav">
+					<div
+						class="header__backdrop"
+						id="headerBackdrop"
+						onclick="navToggle()"
+					></div>
+					<ul class="header__ul" id="headerUl">
+						<li class="header__li">
+							<a class="header__a" href="#about">About</a>
+						</li>
+						<li class="header__li">
+							<a class="header__a" href="#services">Services</a>
+						</li>
+						<li class="header__li">
+							<a class="header__a" href="#skills">Skills</a>
+						</li>
+						<li class="header__li">
+							<a class="header__a" href="#projects">Projects</a>
+						</li>
+						<button class="btn header__small-btn" onclick="downloadCV()">
+							<span class="material-symbols-outlined"> download </span>CV
+						</button>
+						<div class="language__small">
+							<a href="index.html" id="eng" class="lang-option">Eng</a> /
+							<a href="index-uk.html" id="ukr" class="lang-option">Ukr</a>
+						</div>
+						<span class="material-icons icon-close" onclick="navToggle()"
+							>close</span
+						>
+					</ul>
+					<span class="material-icons icon-menu" onclick="navToggle()"
+						>menu</span
+					>
+				</div>
+
+				<div class="header__group">
+					<button class="btn header__btn" onclick="downloadCV()">
+						Download CV
+					</button>
+					<div class="language">
+						<a href="index.html" id="eng" class="lang-option active">Eng</a> /
+						<a href="index-uk.html" id="ukr" class="lang-option">Ukr</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="home">
+			<div class="container home__container">
+				<div class="home__info">
+					<div class="home__preview">
+						Hello, I'm
+						<h1 class="name">Daryna Pavlenko</h1>
+					</div>
+					<h2 class="position">Front-end developer</h2>
+
+					<p class="home__desc">
+						My journey in web development is driven by a passion for coding and
+						a keen interest in design. I enjoy transforming concepts into
+						functional and aesthetically pleasing websites using HTML, CSS,
+						JavaScript and frameworks.
+					</p>
+
+					<div class="home__group">
+						<a href="#contact" class="btn home__btn">Contact Me</a>
+
+						<div class="home__socials">
+							<a
+								href="https://github.com/odrryl"
+								class="home__link"
+								target="_blank"
+							>
+								<svg
+									width="35"
+									height="35"
+									viewBox="0 0 35 35"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									class="home__socials-icon"
+								>
+									<g clip-path="url(#clip0_6_65)">
+										<path
+											d="M16.2 5.91584C10.8264 6.51202 6.50423 10.9237 5.92014 16.2893C5.21924 22.251 8.84056 27.3781 13.9805 29.0474V26.305C13.9805 26.305 13.5132 26.4242 12.9292 26.4242C11.2937 26.4242 10.5928 24.9934 10.476 24.1588C10.3592 23.6818 10.1255 23.3241 9.7751 22.9664C9.42465 22.8472 9.30783 22.8472 9.30783 22.728C9.30783 22.4895 9.65828 22.4895 9.7751 22.4895C10.476 22.4895 11.0601 23.3241 11.2937 23.6818C11.8778 24.6357 12.5787 24.8742 12.9292 24.8742C13.3964 24.8742 13.7469 24.755 13.9805 24.6357C14.0973 23.8011 14.4478 22.9664 15.1487 22.4895C12.4619 21.8933 10.476 20.3433 10.476 17.7201C10.476 16.4085 11.0601 15.0969 11.8778 14.143C11.761 13.9046 11.6442 13.3084 11.6442 12.4738C11.6442 11.9968 11.6442 11.2814 11.9946 10.566C11.9946 10.566 13.6301 10.566 15.2655 12.1161C15.8496 11.8776 16.6673 11.7584 17.485 11.7584C18.3027 11.7584 19.1204 11.8776 19.8213 12.1161C21.34 10.566 23.0922 10.566 23.0922 10.566C23.3258 11.2814 23.3258 11.9968 23.3258 12.4738C23.3258 13.4276 23.209 13.9046 23.0922 14.143C23.9099 15.0969 24.494 16.2893 24.494 17.7201C24.494 20.3433 22.5081 21.8933 19.8213 22.4895C20.5222 23.0857 20.9895 24.1588 20.9895 25.2319V29.1666C25.779 27.6166 29.1667 23.0857 29.1667 17.8393C29.1667 10.6852 23.209 5.0812 16.2 5.91584Z"
+											fill="currentColor"
+										/>
+										<circle
+											cx="17.5"
+											cy="17.5"
+											r="16.5"
+											stroke="currentColor"
+											stroke-width="2"
+										/>
+									</g>
+									<defs>
+										<clipPath id="clip0_6_65">
+											<rect width="35" height="35" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+							<a href="https://t.me/odrryl" class="home__link" target="_blank"
+								><svg
+									width="35"
+									height="35"
+									viewBox="0 0 35 35"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									class="home__socials-icon"
+								>
+									<circle
+										cx="17.5"
+										cy="17.5"
+										r="16.5"
+										stroke="currentColor"
+										stroke-width="2"
+									/>
+									<path
+										d="M17.665 6.93311C23.5922 6.93311 28.3968 11.7377 28.3968 17.6649C28.3968 23.5921 23.5922 28.3967 17.665 28.3967C11.7378 28.3967 6.93323 23.5921 6.93323 17.6649C6.93323 11.7377 11.7378 6.93311 17.665 6.93311ZM21.367 22.0393C21.5644 21.4336 22.4892 15.3977 22.6035 14.2083C22.6381 13.8481 22.5242 13.6088 22.3012 13.5019C22.0315 13.3722 21.6321 13.437 21.1687 13.6041C20.5332 13.8332 12.4088 17.2828 11.9394 17.4825C11.4942 17.6714 11.0734 17.8777 11.0734 18.1763C11.0734 18.3863 11.198 18.5043 11.5414 18.627C11.8988 18.7544 12.7989 19.0274 13.3303 19.1739C13.8422 19.3153 14.425 19.1926 14.7516 18.9896C15.0978 18.7745 19.0933 16.1009 19.3802 15.8666C19.6667 15.6324 19.8954 15.9324 19.6611 16.1671C19.4269 16.4014 16.6842 19.0633 16.3226 19.4319C15.8835 19.8794 16.1952 20.3432 16.4897 20.5289C16.8261 20.7407 19.2454 22.3636 19.6098 22.6239C19.9742 22.8843 20.3438 23.0023 20.6821 23.0023C21.0203 23.0023 21.1986 22.5567 21.367 22.0393Z"
+										fill="currentColor"
+									/>
+								</svg>
+							</a>
+							<a
+								href="https://www.linkedin.com/in/daryna-pavlenko-363157303/"
+								class="home__link"
+								target="_blank"
+							>
+								<svg
+									width="35"
+									height="35"
+									viewBox="0 0 35 35"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									class="home__socials-icon"
+								>
+									<g clip-path="url(#clip0_6_71)">
+										<circle
+											cx="17.5"
+											cy="17.5"
+											r="16.5"
+											stroke="currentColor"
+											stroke-width="2"
+										/>
+										<path
+											d="M17.665 6C11.223 6 6 11.223 6 17.665C6 24.107 11.223 29.33 17.665 29.33C24.107 29.33 29.33 24.107 29.33 17.665C29.33 11.223 24.107 6 17.665 6ZM13.2867 11.2522C14.1052 11.2522 14.6506 11.7975 14.6506 12.5246C14.6506 13.2517 14.1052 13.7971 13.1963 13.7971C12.3778 13.7981 11.8325 13.2517 11.8325 12.5246C11.8325 11.7975 12.3778 11.2522 13.2867 11.2522ZM14.7487 22.5254H11.8325V14.7487H14.7487V22.5254ZM24.4696 22.5254H21.7244V18.2755C21.7244 17.1002 20.9924 16.829 20.7183 16.829C20.4442 16.829 19.5285 17.0098 19.5285 18.2755C19.5285 18.4563 19.5285 22.5254 19.5285 22.5254H16.6929V14.7487H19.5295V15.8336C19.895 15.2008 20.6269 14.7487 21.9995 14.7487C23.3721 14.7487 24.4696 15.8336 24.4696 18.2755V22.5254Z"
+											fill="currentColor"
+										/>
+									</g>
+									<defs>
+										<clipPath id="clip0_6_71">
+											<rect width="35" height="35" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="img-mask roll-in-blurred-top">
+					<img src="img/developer.jpg" alt="Developer" class="home__img" />
+				</div>
+			</div>
+		</section>
+
+		<section class="about anim" id="about">
+			<div class="about__bg">
+				<div class="container about__container">
+					<h2 class="title"><span>About Me</span></h2>
+					<p class="desc">
+						I'm a master's student at
+						<a href="https://www.kpi.kharkov.ua/eng/"><span>KhPI</span></a
+						>, majoring in
+						<a
+							href="https://web.kpi.kharkov.ua/infiz/en/geometric-modeling-and-computer-graphics/"
+							><span>Computer Science</span></a
+						>. As a junior front-end developer, I craft visually appealing and
+						functional websites. Outside of coding, I enjoy hiking and
+						photography!
+					</p>
+
+					<div class="about__statistics">
+						<div class="about__group">
+							<p class="about__num">2</p>
+							<p class="about__num-desc">Client Served</p>
+						</div>
+
+						<div class="about__group">
+							<p class="about__num">7+</p>
+							<p class="about__num-desc">Months of Experience</p>
+						</div>
+
+						<div class="about__group">
+							<p class="about__num">15</p>
+							<p class="about__num-desc">Projects Done</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="services anim" id="services">
+			<div class="services__bg">
+				<div class="container services__container">
+					<h2 class="title">Services</h2>
+					<p class="desc">
+						I offer services tailored to creating modern and responsive
+						websites.
+					</p>
+
+					<div class="services__group">
+						<div class="services__block">
+							<img src="img/icons/responsive_icon.svg" alt="" class="icon" />
+							<h3 class="services__block-title">Responsive Design</h3>
+							<p class="services__block-desc">
+								I adapt sites to be responsive on all devices.
+							</p>
+						</div>
+
+						<div class="services__block">
+							<img src="img/icons/user_icon.svg" alt="" class="icon" />
+							<h3 class="services__block-title">User Experience</h3>
+							<p class="services__block-desc">
+								I focus on enhancing the overall experience of your website
+								visitors.
+							</p>
+						</div>
+
+						<div class="services__block">
+							<img src="img/icons/usability_icon.svg" alt="" class="icon" />
+							<h3 class="services__block-title">Usability Testing</h3>
+							<p class="services__block-desc">
+								I identify and address usability issues.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="skills anim" id="skills">
+			<div class="container skills__container">
+				<h2 class="title"><span>Skills</span></h2>
+				<p class="desc">
+					I possess proficiency in a comprehensive suite of front-end
+					development tools and technologies. Additionally, I actively study and
+					use modern frameworks and libraries like React.js and Vue.js to build
+					dynamic and responsive web applications.
+				</p>
+
+				<div class="skills__group">
+					<div class="skills__block">
+						<img src="img/icons/html.svg" alt="Html" class="icon" />
+
+						<p class="skills__block-title">Html</p>
+					</div>
+
+					<div class="skills__block">
+						<img src="img/icons/css.svg" alt="Css" class="icon" />
+						<p class="skills__block-title">Css</p>
+					</div>
+
+					<div class="skills__block">
+						<img src="img/icons/sass.svg" alt="Sass" class="icon" />
+						<p class="skills__block-title">Sass</p>
+					</div>
+
+					<div class="skills__block">
+						<img src="img/icons/gulp.svg" alt="Gulp" class="icon" />
+						<p class="skills__block-title">Gulp</p>
+					</div>
+
+					<div class="skills__block">
+						<img src="img/icons/js.svg" alt="JavaScript" class="icon" />
+						<p class="skills__block-title">JavaScript</p>
+					</div>
+
+					<div class="skills__block">
+						<img src="img/icons/vue.svg" alt="Vue.js" class="icon" />
+
+						<p class="skills__block-title">Vue.js</p>
+					</div>
+
+					<div class="skills__block">
+						<img src="img/icons/react.svg" alt="React.js" class="icon" />
+						<p class="skills__block-title">React.js</p>
+					</div>
+
+					<div class="skills__block">
+						<img src="img/icons/git.svg" alt="Github" class="icon" />
+						<p class="skills__block-title">Github</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="projects anim" id="projects">
+			<div class="projects__bg">
+				<div class="container projects__container">
+					<h2 class="title">Projects</h2>
+					<p class="desc">
+						Here you'll find a collection of my recent projects, showcasing my
+						dedication to creating impactful web experiences through meticulous
+						design and coding.
+					</p>
+					<div class="projects__group">
+						<div class="projects__item" data-category="vue">
+							<a
+								href="https://odrryl.github.io/Skilline-Website/"
+								target="_blank"
+							>
+								<div class="projects__item__img-container">
+									<img src="img/skilline.png" alt="Preview" />
+								</div>
+								<h4 class="projects__item-title">Skilline</h4>
+								<p class="projects__item-desc">Skilline landing page.</p>
+								<div class="projects__item-info">
+									<p class="projects__item-tags">Vue.js | Html | Sass</p>
+									<a
+										href="https://github.com/odrryl/Skilline-Website"
+										class="projects__item-link"
+										target="_blank"
+										>View Code</a
+									>
+								</div>
+							</a>
+						</div>
+
+						<div class="projects__item" data-category="vanilla">
+							<a href="https://odrryl.github.io/Zone./" target="_blank">
+								<div class="projects__item__img-container">
+									<img src="img/zone.png" alt="Preview" />
+								</div>
+								<h4 class="projects__item-title">Zone</h4>
+								<p class="projects__item-desc">Zone landing page.</p>
+								<div class="projects__item-info">
+									<p class="projects__item-tags">Html | Css | Js</p>
+									<a
+										href="https://github.com/odrryl/Zone."
+										class="projects__item-link"
+										target="_blank"
+										>View Code</a
+									>
+								</div>
+							</a>
+						</div>
+
+						<div class="projects__item" data-category="react">
+							<a href="https://odrryl.github.io/TammyFood/" target="_blank">
+								<div class="projects__item__img-container">
+									<img src="img/tammy.png" alt="Preview" />
+								</div>
+								<h4 class="projects__item-title">TammyFood</h4>
+								<p class="projects__item-desc">TammyFood landing page.</p>
+								<div class="projects__item-info">
+									<p class="projects__item-tags">React.js | Html | Sass</p>
+									<a
+										href="https://github.com/odrryl/TammyFood"
+										class="projects__item-link"
+										target="_blank"
+										>View Code</a
+									>
+								</div>
+							</a>
+						</div>
+
+						<div class="projects__item" data-category="react">
+							<a href="https://odrryl.github.io/CoffeeApp/" target="_blank">
+								<div class="projects__item__img-container">
+									<img src="img/coffee.png" alt="Preview" />
+								</div>
+								<h4 class="projects__item-title">Coffee</h4>
+								<p class="projects__item-desc">
+									Coffee App developing practice. Mobile version only. Click on
+									the <span>Home Page</span> on 404 page.
+								</p>
+								<div class="projects__item-info">
+									<p class="projects__item-tags">React.js | Html | Sass</p>
+									<a
+										href="https://github.com/odrryl/CoffeeApp"
+										class="projects__item-link"
+										target="_blank"
+										>View Code</a
+									>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer" id="contact">
+			<div class="footer__bg">
+				<div class="container footer__container">
+					<h2 class="title"><span>Ways To Contact Me</span></h2>
+					<p class="desc">
+						Here are the best ways to get in touch with me. I look forward to
+						connecting with you and creating more modern websites together!
+					</p>
+
+					<div class="footer__contacts">
+						<div class="contact">
+							<img src="img/icons/tel.svg" alt="" class="contact__icon" />
+							<a class="contact__desc" href="tel:+380509842967"
+								>+(380)509-842-967</a
+							>
+						</div>
+
+						<div class="contact">
+							<img src="img/icons/email.svg" alt="" class="contact__icon" />
+							<a class="contact__desc" href="mailto:daryna.pavlenk007@gmail.com"
+								>daryna.pavlenk007@gmail.com</a
+							>
+						</div>
+					</div>
+
+					<div class="footer__socials">
+						<a href="https://t.me/odrryl" class="footer__link" target="_blank">
+							<svg
+								width="35"
+								height="35"
+								viewBox="0 0 35 35"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="footer__socials-icon"
+							>
+								<circle
+									cx="17.5"
+									cy="17.5"
+									r="16.5"
+									stroke="currentColor"
+									stroke-width="2"
+								/>
+								<path
+									d="M17.665 6.93311C23.5922 6.93311 28.3968 11.7377 28.3968 17.6649C28.3968 23.5921 23.5922 28.3967 17.665 28.3967C11.7378 28.3967 6.93323 23.5921 6.93323 17.6649C6.93323 11.7377 11.7378 6.93311 17.665 6.93311ZM21.367 22.0393C21.5644 21.4336 22.4892 15.3977 22.6035 14.2083C22.6381 13.8481 22.5242 13.6088 22.3012 13.5019C22.0315 13.3722 21.6321 13.437 21.1687 13.6041C20.5332 13.8332 12.4088 17.2828 11.9394 17.4825C11.4942 17.6714 11.0734 17.8777 11.0734 18.1763C11.0734 18.3863 11.198 18.5043 11.5414 18.627C11.8988 18.7544 12.7989 19.0274 13.3303 19.1739C13.8422 19.3153 14.425 19.1926 14.7516 18.9896C15.0978 18.7745 19.0933 16.1009 19.3802 15.8666C19.6667 15.6324 19.8954 15.9324 19.6611 16.1671C19.4269 16.4014 16.6842 19.0633 16.3226 19.4319C15.8835 19.8794 16.1952 20.3432 16.4897 20.5289C16.8261 20.7407 19.2454 22.3636 19.6098 22.6239C19.9742 22.8843 20.3438 23.0023 20.6821 23.0023C21.0203 23.0023 21.1986 22.5567 21.367 22.0393Z"
+									fill="currentColor"
+								/>
+							</svg>
+						</a>
+						<a
+							href="https://github.com/odrryl"
+							class="footer__link"
+							target="_blank"
+							><svg
+								width="35"
+								height="35"
+								viewBox="0 0 35 35"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="footer__socials-icon"
+							>
+								<g clip-path="url(#clip0_6_65)">
+									<path
+										d="M16.2 5.91584C10.8264 6.51202 6.50423 10.9237 5.92014 16.2893C5.21924 22.251 8.84056 27.3781 13.9805 29.0474V26.305C13.9805 26.305 13.5132 26.4242 12.9292 26.4242C11.2937 26.4242 10.5928 24.9934 10.476 24.1588C10.3592 23.6818 10.1255 23.3241 9.7751 22.9664C9.42465 22.8472 9.30783 22.8472 9.30783 22.728C9.30783 22.4895 9.65828 22.4895 9.7751 22.4895C10.476 22.4895 11.0601 23.3241 11.2937 23.6818C11.8778 24.6357 12.5787 24.8742 12.9292 24.8742C13.3964 24.8742 13.7469 24.755 13.9805 24.6357C14.0973 23.8011 14.4478 22.9664 15.1487 22.4895C12.4619 21.8933 10.476 20.3433 10.476 17.7201C10.476 16.4085 11.0601 15.0969 11.8778 14.143C11.761 13.9046 11.6442 13.3084 11.6442 12.4738C11.6442 11.9968 11.6442 11.2814 11.9946 10.566C11.9946 10.566 13.6301 10.566 15.2655 12.1161C15.8496 11.8776 16.6673 11.7584 17.485 11.7584C18.3027 11.7584 19.1204 11.8776 19.8213 12.1161C21.34 10.566 23.0922 10.566 23.0922 10.566C23.3258 11.2814 23.3258 11.9968 23.3258 12.4738C23.3258 13.4276 23.209 13.9046 23.0922 14.143C23.9099 15.0969 24.494 16.2893 24.494 17.7201C24.494 20.3433 22.5081 21.8933 19.8213 22.4895C20.5222 23.0857 20.9895 24.1588 20.9895 25.2319V29.1666C25.779 27.6166 29.1667 23.0857 29.1667 17.8393C29.1667 10.6852 23.209 5.0812 16.2 5.91584Z"
+										fill="currentColor"
+									/>
+									<circle
+										cx="17.5"
+										cy="17.5"
+										r="16.5"
+										stroke="currentColor"
+										stroke-width="2"
+									/>
+								</g>
+								<defs>
+									<clipPath id="clip0_6_65">
+										<rect width="35" height="35" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+						<a
+							href="https://www.instagram.com/odrryl/"
+							class="footer__link"
+							target="_blank"
+							><svg
+								width="35"
+								height="35"
+								viewBox="0 0 35 35"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="footer__socials-icon"
+							>
+								<g clip-path="url(#clip0_6_88)">
+									<circle
+										cx="17.5"
+										cy="17.5"
+										r="16.5"
+										stroke="currentColor"
+										stroke-width="2"
+									/>
+									<path
+										d="M12.8598 6C9.09437 6 6 9.09023 6 12.8598V22.4702C6 26.2356 9.09023 29.33 12.8598 29.33H22.4702C26.2356 29.33 29.33 26.2398 29.33 22.4702V12.8598C29.33 9.09437 26.2398 6 22.4702 6H12.8598ZM12.8598 8.12091H22.4702C25.0923 8.12091 27.2091 10.2377 27.2091 12.8598V22.4702C27.2091 25.0923 25.0923 27.2091 22.4702 27.2091H12.8598C10.2377 27.2091 8.12091 25.0923 8.12091 22.4702V12.8598C8.12091 10.2377 10.2377 8.12091 12.8598 8.12091ZM23.9283 10.4407C23.3939 10.4407 22.9673 10.8673 22.9673 11.4017C22.9673 11.9361 23.3939 12.3627 23.9283 12.3627C24.4627 12.3627 24.8893 11.9361 24.8893 11.4017C24.8893 10.8673 24.4627 10.4407 23.9283 10.4407ZM17.665 11.3023C14.1647 11.3023 11.3023 14.1647 11.3023 17.665C11.3023 21.1653 14.1647 24.0277 17.665 24.0277C21.1653 24.0277 24.0277 21.1653 24.0277 17.665C24.0277 14.1647 21.1653 11.3023 17.665 11.3023ZM17.665 13.4232C20.022 13.4232 21.9068 15.308 21.9068 17.665C21.9068 20.022 20.022 21.9068 17.665 21.9068C15.308 21.9068 13.4232 20.022 13.4232 17.665C13.4232 15.308 15.308 13.4232 17.665 13.4232Z"
+										fill="currentColor"
+									/>
+								</g>
+								<defs>
+									<clipPath id="clip0_6_88">
+										<rect width="35" height="35" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+						<a
+							href="https://www.linkedin.com/in/daryna-pavlenko-363157303/"
+							class="footer__link"
+							target="_blank"
+							><svg
+								width="35"
+								height="35"
+								viewBox="0 0 35 35"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="footer__socials-icon"
+							>
+								<g clip-path="url(#clip0_6_71)">
+									<circle
+										cx="17.5"
+										cy="17.5"
+										r="16.5"
+										stroke="currentColor"
+										stroke-width="2"
+									/>
+									<path
+										d="M17.665 6C11.223 6 6 11.223 6 17.665C6 24.107 11.223 29.33 17.665 29.33C24.107 29.33 29.33 24.107 29.33 17.665C29.33 11.223 24.107 6 17.665 6ZM13.2867 11.2522C14.1052 11.2522 14.6506 11.7975 14.6506 12.5246C14.6506 13.2517 14.1052 13.7971 13.1963 13.7971C12.3778 13.7981 11.8325 13.2517 11.8325 12.5246C11.8325 11.7975 12.3778 11.2522 13.2867 11.2522ZM14.7487 22.5254H11.8325V14.7487H14.7487V22.5254ZM24.4696 22.5254H21.7244V18.2755C21.7244 17.1002 20.9924 16.829 20.7183 16.829C20.4442 16.829 19.5285 17.0098 19.5285 18.2755C19.5285 18.4563 19.5285 22.5254 19.5285 22.5254H16.6929V14.7487H19.5295V15.8336C19.895 15.2008 20.6269 14.7487 21.9995 14.7487C23.3721 14.7487 24.4696 15.8336 24.4696 18.2755V22.5254Z"
+										fill="currentColor"
+									/>
+								</g>
+								<defs>
+									<clipPath id="clip0_6_71">
+										<rect width="35" height="35" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+					</div>
+
+					<a class="up" href="#home"
+						><img src="img/icons/up_arrow.svg" alt="Up" class="icon"
+					/></a>
+				</div>
+
+				<div class="copyright">
+					&copy; Copyright <span id="copyright-year"></span>, odrryl. All Rights
+					Reserved.
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="./js/index.bundle.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

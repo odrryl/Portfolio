@@ -1,0 +1,99 @@
+.footer {
+	text-align: center;
+
+	&__bg {
+		background-image: url("img/cyan-bg.png");
+		background-size: contain;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		z-index: -2;
+		padding-bottom: 20rem;
+	}
+	&__container {
+		padding-top: 100rem;
+		flex-direction: column;
+
+		@include tablet {
+			padding-top: 70rem;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		gap: 60rem;
+
+		@include tablet {
+			flex-direction: column;
+			gap: 20rem;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		gap: 20rem;
+		margin-top: 55rem;
+
+		@include mobile {
+			gap: 5rem;
+		}
+
+		&-icon {
+			color: var(--accent-color-secondary);
+
+			@include tablet {
+				max-width: 30rem;
+			}
+
+			@include mobile {
+				max-width: 20rem;
+			}
+		}
+	}
+
+	&__link {
+		transition: var(--transition);
+
+		@include mobile {
+			width: 25rem;
+		}
+	}
+	&__link:hover {
+		transform: scale(1.1);
+
+		@include tablet {
+			transform: none;
+		}
+	}
+}
+
+.contact {
+	display: flex;
+	gap: 20rem;
+	background: var(--secondary-color);
+	padding: 20rem;
+	align-items: center;
+	justify-content: center;
+
+	@include mobile {
+		gap: 10rem;
+		padding: 15rem;
+	}
+
+	&__desc {
+		font-weight: 500;
+		font-size: 18rem;
+
+		@include tablet {
+			font-size: 16rem;
+		}
+		@include mobile {
+			font-size: 12rem;
+		}
+	}
+
+	&__icon {
+		@include mobile {
+			width: 20rem;
+		}
+	}
+}

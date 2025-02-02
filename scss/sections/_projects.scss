@@ -1,0 +1,162 @@
+.projects {
+	&__bg {
+		background-image: url("img/rainbow-bg.png");
+		background-size: auto;
+		background-position: center center;
+		background-repeat: no-repeat;
+		z-index: -2;
+
+		@include tablet {
+			background-size: contain;
+		}
+
+		@include mobile {
+			background-image: none;
+		}
+	}
+	&__container {
+		flex-direction: column;
+	}
+
+	&__group {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 90rem;
+		grid-row-gap: 90rem;
+
+		@include desktop-small {
+			grid-column-gap: 50rem;
+			grid-row-gap: 50rem;
+		}
+		@include tablet {
+			grid-template-columns: 1fr;
+			grid-row-gap: 40rem;
+		}
+	}
+	&__item {
+		background: var(--primary-color);
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		padding: 25rem;
+		max-width: 500rem;
+		width: 100%;
+
+		box-shadow: 0 0 40rem 0 #d9543a3a;
+
+		transition: opacity 0.3s ease, transform 0.3s ease;
+
+		@include desktop-small {
+			max-width: 400rem;
+		}
+
+		@include tablet {
+			max-width: 500rem;
+		}
+
+		@include mobile {
+			max-width: 350rem;
+			padding: 15rem;
+		}
+
+		&__img-container {
+			overflow: hidden;
+			position: relative;
+			max-width: fit-content;
+			height: 270rem;
+
+			@include desktop-small {
+				height: 200rem;
+			}
+
+			@include tablet {
+				height: 230rem;
+			}
+
+			@include mobile {
+				height: 150rem;
+			}
+		}
+
+		&__img-container img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			transition: transform 0.5s ease;
+		}
+
+		&__img-container:hover img {
+			transform: scale(1.2);
+
+			@include tablet {
+				transform: none;
+			}
+		}
+
+		&-title {
+			margin-top: 40rem;
+
+			font-family: var(--second-family);
+			font-weight: 700;
+			font-size: 26rem;
+			line-height: 135%;
+			color: var(--accent-color-primary);
+
+			@include tablet {
+				font-size: 22rem;
+			}
+
+			@include mobile {
+				font-size: 18rem;
+				margin-top: 20rem;
+			}
+		}
+
+		&-desc {
+			font-family: var(--second-family);
+			font-weight: 400;
+			font-size: 18rem;
+			margin-top: 5rem;
+
+			span {
+				color: var(--accent-color-primary);
+			}
+
+			@include mobile {
+				font-size: 14rem;
+			}
+		}
+
+		&-info {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 25rem;
+		}
+
+		&-link {
+			@extend .projects__item-tags;
+			text-decoration: underline;
+			text-decoration-skip-ink: none;
+		}
+
+		&-tags {
+			font-weight: 400;
+			font-size: 16rem;
+
+			@include tablet {
+				font-size: 14rem;
+			}
+
+			@include mobile {
+				font-size: 10rem;
+			}
+		}
+	}
+
+	&__item.hidden {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+}

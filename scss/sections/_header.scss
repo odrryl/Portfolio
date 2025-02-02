@@ -1,0 +1,152 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: var(--transition-header);
+	z-index: 1000;
+
+	background: #050505d5;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+
+	&.hidden {
+		transform: translateY(-100%);
+	}
+
+	@include tablet {
+		position: static;
+		transform: none;
+		background: none;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+	}
+
+	&__container {
+		justify-content: space-between;
+		padding-top: 15rem;
+		padding-bottom: 15rem;
+	}
+
+	&__backdrop {
+		background: rgba(0, 0, 0, 0.6);
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		transform: translateX(120%);
+		display: none;
+		transition: var(--transition);
+		opacity: 0;
+
+		@include tablet {
+			display: block;
+		}
+
+		&._active {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	&__a:hover {
+		color: var(--accent-color-primary);
+	}
+	&__ul {
+		display: flex;
+		align-items: center;
+		gap: 32rem;
+		z-index: 9;
+
+		font-weight: 600;
+		font-size: 18rem;
+		transition: var(--transition);
+
+		@include tablet {
+			z-index: 9;
+			position: fixed;
+			width: 70%;
+			height: 100%;
+			flex-direction: column;
+			left: 0;
+			top: 0;
+			background: var(--primary-color);
+			align-items: center;
+			justify-content: center;
+			transform: translateX(-120%);
+			transition: var(--transition);
+		}
+		@include mobile {
+			font-size: 12rem;
+		}
+		&._active {
+			transform: translateX(0);
+		}
+
+		.icon-close {
+			position: absolute;
+			top: 40px;
+			right: 40px;
+			color: var(--txt-color);
+		}
+	}
+
+	&__a {
+		transition: var(--transition);
+		@include tablet {
+			color: var(--txt-color);
+		}
+	}
+
+	&__group {
+		display: flex;
+		align-items: center;
+		gap: 35rem;
+	}
+
+	&__btn {
+		transition: var(--transition);
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__btn:hover {
+		transform: scale(1.1);
+	}
+
+	&__small-btn {
+		font-weight: 600;
+		font-size: 16rem;
+		padding: 6rem 12rem;
+		display: none;
+
+		@include tablet {
+			display: flex;
+			gap: 2rem;
+		}
+
+		@include mobile {
+			font-size: 14rem;
+		}
+	}
+}
+
+.icon-menu,
+.icon-close {
+	cursor: pointer;
+	display: none;
+
+	@include tablet {
+		display: inline-block;
+	}
+}
+
+.header__nav {
+	@include tablet {
+		margin-left: auto;
+	}
+}

@@ -1,0 +1,56 @@
+.skills {
+	&__container {
+		flex-direction: column;
+	}
+
+	&__group {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 100rem;
+		grid-row-gap: 100rem;
+
+		@include desktop-small {
+			grid-column-gap: 70rem;
+			grid-row-gap: 70rem;
+		}
+
+		@include tablet {
+			grid-column-gap: 40rem;
+			grid-row-gap: 40rem;
+		}
+
+		@include mobile {
+			grid-column-gap: 15rem;
+			grid-row-gap: 15rem;
+		}
+	}
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 25rem;
+
+		@include mobile {
+			gap: 15rem;
+		}
+		&-title {
+			font-weight: 500;
+			font-size: 24rem;
+			line-height: 146%;
+			text-align: center;
+
+			@include tablet {
+				font-size: 18rem;
+			}
+			@include mobile {
+				font-size: 12rem;
+			}
+		}
+	}
+
+	&__block svg {
+		color: var(--accent-color-secondary);
+	}
+}

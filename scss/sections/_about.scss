@@ -1,0 +1,76 @@
+.about {
+	&__bg {
+		background-image: url("img/blue-bg.png");
+		background-size: auto;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		z-index: -2;
+
+		@include tablet {
+			background-size: cover;
+		}
+	}
+	&__container {
+		flex-direction: column;
+		z-index: 10;
+	}
+
+	&__statistics {
+		display: flex;
+		padding: 60rem 150rem;
+		gap: 185rem;
+
+		@include tablet {
+			gap: 80rem;
+		}
+
+		@include tablet-small {
+			gap: 60rem;
+			padding: 40rem 60rem;
+		}
+
+		@include tablet-small {
+			gap: 25rem;
+			padding: 20rem 40rem;
+		}
+	}
+
+	&__group {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20rem;
+
+		@include mobile {
+			gap: 5rem;
+		}
+	}
+
+	&__num {
+		font-weight: 800;
+		font-size: 64rem;
+		color: var(--accent-color-secondary);
+
+		@include tablet {
+			font-size: 50rem;
+		}
+
+		@include mobile {
+			font-size: 28rem;
+		}
+
+		&-desc {
+			font-family: var(--second-family);
+			font-weight: 600;
+			font-size: 24rem;
+			text-align: center;
+			@include tablet {
+				font-size: 18rem;
+			}
+
+			@include mobile {
+				font-size: 12rem;
+			}
+		}
+	}
+}

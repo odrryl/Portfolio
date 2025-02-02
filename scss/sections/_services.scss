@@ -1,0 +1,108 @@
+.services {
+	&__bg {
+		background-image: url("img/red-bg.png");
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		background-size: auto;
+
+		@include tablet {
+			background-size: contain;
+			background-position: center center;
+		}
+
+		@include mobile {
+			background-image: none;
+		}
+	}
+	&__container {
+		flex-direction: column;
+	}
+
+	&__group {
+		display: flex;
+		gap: 85rem;
+
+		@include desktop-small {
+			gap: 45rem;
+		}
+		@include tablet {
+			gap: 35rem;
+		}
+		@include tablet-small {
+			flex-direction: column;
+		}
+
+		@include mobile {
+			gap: 25rem;
+		}
+	}
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		box-shadow: 0 0 50rem 0 #d9543ab7;
+		background: var(--secondary-color);
+		padding: 85rem 45rem 65rem 45rem;
+		transition: background-color 0.5s ease-in-out;
+		background: var(--primary-color);
+
+		@include desktop-small {
+			padding: 65rem 25rem 45rem 25rem;
+		}
+
+		@include tablet {
+			padding: 45rem 20rem 35rem 20rem;
+		}
+
+		&-title {
+			font-family: var(--second-family);
+			font-weight: 700;
+			font-size: 26rem;
+			line-height: 135%;
+			text-align: center;
+			margin-top: 20rem;
+
+			@include tablet {
+				font-size: 18rem;
+			}
+
+			@include mobile {
+				font-size: 16rem;
+			}
+		}
+
+		&-desc {
+			font-family: var(--second-family);
+			font-weight: 400;
+			font-size: 18rem;
+			text-align: center;
+			margin-top: 5rem;
+			max-width: 254rem;
+
+			@include tablet {
+				font-size: 14rem;
+			}
+
+			@include mobile {
+				font-size: 12rem;
+			}
+		}
+	}
+
+	&__block:hover {
+		background: var(--accent-color-primary);
+
+		@include tablet {
+			background: var(--primary-color);
+		}
+	}
+
+	&__block:hover .icon {
+		filter: brightness(0) invert(1);
+
+		@include tablet {
+			filter: none;
+		}
+	}
+}
