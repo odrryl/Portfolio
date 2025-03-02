@@ -6,11 +6,6 @@
 		background-size: auto;
 
 		@include tablet {
-			background-size: contain;
-			background-position: center center;
-		}
-
-		@include mobile {
 			background-image: none;
 		}
 	}

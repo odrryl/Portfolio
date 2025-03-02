@@ -56,8 +56,6 @@
 		@include tablet {
 			margin-top: 20rem;
 			font-size: 16rem;
-			max-width: 400rem;
-			max-width: 100%;
 		}
 
 		@include mobile {
@@ -151,7 +149,7 @@
 
 .img-mask {
 	width: 100%;
-	max-width: 410rem;
+	max-width: 360rem;
 	aspect-ratio: 1 / 1;
 	border-radius: 50%;
 	overflow: hidden;
@@ -161,10 +159,10 @@
 	box-shadow: 0 14rem 25rem 0 var(--accent-color-primary);
 
 	@include tablet-small {
-		max-width: 250rem;
+		max-width: 200rem;
 	}
 	@include mobile {
-		max-width: 160rem;
+		max-width: 140rem;
 	}
 }
 

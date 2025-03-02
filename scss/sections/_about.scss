@@ -5,9 +5,11 @@
 		background-position: center bottom;
 		background-repeat: no-repeat;
 		z-index: -2;
+		padding-top: 60rem;
 
 		@include tablet {
 			background-size: cover;
+			padding-top: 0rem;
 		}
 	}
 	&__container {
@@ -17,7 +19,7 @@
 
 	&__statistics {
 		display: flex;
-		padding: 60rem 150rem;
+		padding: 30rem 150rem;
 		gap: 185rem;
 
 		@include tablet {

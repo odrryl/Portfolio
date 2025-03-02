@@ -20,21 +20,22 @@
 
 	&__contacts {
 		display: flex;
-		gap: 60rem;
-
-		@include tablet {
-			flex-direction: column;
-			gap: 20rem;
-		}
+		flex-direction: column;
+		gap: 10rem;
 	}
 
 	&__socials {
 		display: flex;
 		gap: 20rem;
-		margin-top: 55rem;
+		margin-top: 75rem;
+
+		@include tablet{
+			margin-top: 50rem;
+		}
 
 		@include mobile {
 			gap: 5rem;
+			margin-top: 30rem;
 		}
 
 		&-icon {
@@ -70,13 +71,13 @@
 	display: flex;
 	gap: 20rem;
 	background: var(--secondary-color);
-	padding: 20rem;
+	padding: 10rem;
 	align-items: center;
 	justify-content: center;
 
 	@include mobile {
 		gap: 10rem;
-		padding: 15rem;
+		padding: 5rem;
 	}
 
 	&__desc {

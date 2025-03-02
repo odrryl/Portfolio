@@ -68,15 +68,15 @@ a {
 .name {
 	color: var(--accent-color-primary);
 	font-weight: 700;
-	font-size: 50rem;
+	font-size: 40rem;
 	min-width: 450rem;
 
 	@include tablet {
-		font-size: 35rem;
+		font-size: 30rem;
 	}
 
 	@include mobile {
-		font-size: 26rem;
+		font-size: 25rem;
 		min-width: 0;
 	}
 }
