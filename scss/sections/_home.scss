@@ -156,7 +156,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0 14rem 25rem 0 var(--accent-color-primary);
+	box-shadow: 0 10rem 15rem 0 var(--accent-color-primary);
 
 	@include tablet-small {
 		max-width: 200rem;

@@ -16,6 +16,10 @@
 		@include tablet {
 			padding-top: 70rem;
 		}
+
+		@include mobile {
+			padding-top: 40rem;
+		}
 	}
 
 	&__contacts {
@@ -29,7 +33,7 @@
 		gap: 20rem;
 		margin-top: 75rem;
 
-		@include tablet{
+		@include tablet {
 			margin-top: 50rem;
 		}
 
