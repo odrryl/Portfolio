@@ -146,7 +146,7 @@ body {
       padding-bottom: 60rem; } }
   @media (max-width: 576px) {
     .container {
-      padding: 20rem 25rem 20rem 25rem; } }
+      padding: 25rem; } }
 
 .btn {
   display: inline-block;
@@ -557,7 +557,7 @@ a {
       .home__desc {
         font-size: 12rem;
         max-width: 350rem;
-        margin-bottom: 40rem; } }
+        margin-bottom: 30rem; } }
   .home__group {
     display: flex;
     gap: 80rem;
