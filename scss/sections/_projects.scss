@@ -151,7 +151,7 @@
 			text-decoration: underline;
 			text-decoration-skip-ink: none;
 
-			@include mobile{
+			@include mobile {
 				align-self: flex-end;
 			}
 		}
