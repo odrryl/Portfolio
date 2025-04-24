@@ -880,7 +880,7 @@ a {
   @media (max-width: 576px) {
     .projects__item {
       max-width: 350rem;
-      padding: 20rem; } }
+      padding: 25rem; } }
   .projects__item__img-container {
     overflow: hidden;
     position: relative;
