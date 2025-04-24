@@ -1,20 +1,19 @@
 function navToggle() {
 	document.getElementById("headerUl").classList.toggle("_active");
 	document.getElementById("headerBackdrop").classList.toggle("_active");
-}
+  }
+  
 
-function downloadCV() {
-	var isUkrainian = window.location.pathname.includes("index-uk.html");
-	var cvUrl = isUkrainian
-		? "cv/CV_Pavlenko_[ukr].pdf"
-		: "cv/CV_Pavlenko_[eng].pdf";
+  function downloadCV() {
+	var cvUrl = "cv/CV_Pavlenko.pdf";
 	var link = document.createElement("a");
 	link.href = cvUrl;
-	link.download = cvUrl.split("/").pop();
+	link.download = "CV_Pavlenko.pdf";
 	document.body.appendChild(link);
 	link.click();
 	document.body.removeChild(link);
 }
+
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 	anchor.addEventListener("click", function (e) {

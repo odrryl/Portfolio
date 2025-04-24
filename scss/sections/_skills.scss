@@ -7,13 +7,8 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(2, 1fr);
-		grid-column-gap: 100rem;
-		grid-row-gap: 100rem;
-
-		@include desktop-small {
-			grid-column-gap: 70rem;
-			grid-row-gap: 70rem;
-		}
+		grid-column-gap: 70rem;
+		grid-row-gap: 70rem;
 
 		@include tablet {
 			grid-column-gap: 40rem;
@@ -21,6 +16,8 @@
 		}
 
 		@include mobile {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(4, 1fr);
 			grid-column-gap: 15rem;
 			grid-row-gap: 15rem;
 		}
@@ -37,15 +34,15 @@
 		}
 		&-title {
 			font-weight: 500;
-			font-size: 24rem;
+			font-size: 25rem;
 			line-height: 146%;
 			text-align: center;
 
 			@include tablet {
-				font-size: 18rem;
+				font-size: 22rem;
 			}
 			@include mobile {
-				font-size: 12rem;
+				font-size: 20rem;
 			}
 		}
 	}

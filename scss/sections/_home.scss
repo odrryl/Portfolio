@@ -4,6 +4,7 @@
 	@include tablet {
 		padding-top: 0rem;
 	}
+
 	&__container {
 		padding-top: 20rem;
 		justify-content: space-between;
@@ -11,11 +12,13 @@
 
 		@include tablet {
 			gap: 35rem;
+			padding-top: 70rem;
 		}
 		@include tablet-small {
 			flex-direction: column-reverse;
 			justify-content: center;
 			text-align: center;
+			align-items: center;
 		}
 	}
 
@@ -29,23 +32,23 @@
 
 	&__preview {
 		font-weight: 400;
-		font-size: 27rem;
+		font-size: 30rem;
 		display: flex;
 		flex-direction: column;
 		gap: 5rem;
 
 		@include tablet {
-			font-size: 22rem;
+			font-size: 26rem;
 		}
 
 		@include mobile {
-			font-size: 18rem;
+			font-size: 20rem;
 		}
 	}
 	&__desc {
 		font-family: var(--second-family);
 		font-weight: 300;
-		font-size: 20rem;
+		font-size: 22rem;
 		line-height: 140%;
 		margin-top: 35rem;
 		max-width: 645rem;
@@ -55,11 +58,11 @@
 
 		@include tablet {
 			margin-top: 20rem;
-			font-size: 16rem;
+			font-size: 20rem;
 		}
 
 		@include mobile {
-			font-size: 12rem;
+			font-size: 18rem;
 			max-width: 350rem;
 
 			margin-bottom: 30rem;
@@ -68,7 +71,7 @@
 	&__group {
 		display: flex;
 		gap: 80rem;
-		align-items: center;
+		align-items: flex-end;
 
 		@include tablet {
 			gap: 60rem;
@@ -76,7 +79,11 @@
 
 		@include mobile {
 			gap: 30rem;
+		}
+
+		@include mobile-small {
 			flex-direction: column;
+			align-items: center;
 		}
 	}
 
@@ -85,49 +92,37 @@
 
 		@keyframes pulse {
 			0% {
-				box-shadow: 0 0 0rem 0 #d9543a3e;
+				box-shadow: 0 0 0rem 0 #ef474da8;
 			}
 			50% {
-				box-shadow: 0 0 35rem 0 #d9543a3e;
+				box-shadow: 0 0 35rem 0 #ef474da8;
 			}
 			100% {
-				box-shadow: 0 0 0rem 0 #d9543a3e;
+				box-shadow: 0 0 0rem 0 #ef474da8;
 			}
-		}
-
-		@include tablet {
-			font-size: 16rem;
-			padding: 10rem 20rem;
 		}
 
 		@include mobile {
-			font-size: 12rem;
+			padding: 10rem 20rem;
+			font-size: 16rem;
 		}
 	}
 
 	&__btn:hover {
 		animation: none;
-		box-shadow: 0 0 35rem 0 #d9543a3e;
+		box-shadow: 0 0 35rem 0 var(--accent-color-primary);
 	}
 
 	&__socials {
 		display: flex;
 		gap: 20rem;
+		align-items: center;
 
-		@include mobile {
-			gap: 5rem;
-		}
+		
 
 		&-icon {
 			color: var(--accent-color-primary);
 
-			@include tablet {
-				max-width: 30rem;
-			}
-
-			@include mobile {
-				max-width: 20rem;
-			}
 		}
 	}
 
@@ -149,20 +144,20 @@
 
 .img-mask {
 	width: 100%;
-	max-width: 360rem;
+	max-width: 400rem;
 	aspect-ratio: 1 / 1;
 	border-radius: 50%;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0 10rem 15rem 0 var(--accent-color-primary);
+	box-shadow: 0 10rem 25rem 0 var(--accent-color-primary);
 
 	@include tablet-small {
 		max-width: 200rem;
 	}
 	@include mobile {
-		max-width: 140rem;
+		max-width: 150rem;
 	}
 }
 
@@ -170,19 +165,4 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
-
-.position {
-	font-weight: 400;
-	font-size: 27rem;
-	margin-top: 5rem;
-
-	@include tablet {
-		font-size: 22rem;
-	}
-
-	@include mobile {
-		font-size: 18rem;
-		min-width: 220rem;
-	}
 }

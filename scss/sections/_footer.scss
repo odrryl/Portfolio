@@ -32,26 +32,18 @@
 		display: flex;
 		gap: 20rem;
 		margin-top: 75rem;
+		align-items: center;
 
 		@include tablet {
 			margin-top: 50rem;
 		}
 
 		@include mobile {
-			gap: 5rem;
 			margin-top: 30rem;
 		}
 
 		&-icon {
 			color: var(--accent-color-secondary);
-
-			@include tablet {
-				max-width: 30rem;
-			}
-
-			@include mobile {
-				max-width: 20rem;
-			}
 		}
 	}
 
@@ -92,7 +84,7 @@
 			font-size: 16rem;
 		}
 		@include mobile {
-			font-size: 12rem;
+			font-size: 14rem;
 		}
 	}
 
