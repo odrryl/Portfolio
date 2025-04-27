@@ -32,14 +32,14 @@
 		}
 
 		@include tablet-small {
-			gap: 20rem;
+			gap: 30rem;
 			padding: 20rem 40rem;
 		}
 
 		@include mobile {
 			padding: 0;
 			padding-bottom: 20rem;
-			gap: 15rem;
+			gap: 20rem;
 		}
 	}
 

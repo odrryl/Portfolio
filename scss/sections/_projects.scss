@@ -15,8 +15,12 @@
 			grid-row-gap: 45rem;
 		}
 		@include tablet {
-			grid-template-columns: 1fr;
 			grid-row-gap: 25rem;
+			grid-column-gap: 25rem;
+		}
+		@include tablet-small{
+			grid-template-columns: 1fr;
+			
 		}
 
 		@include mobile {
@@ -43,11 +47,18 @@
 
 		@include tablet {
 			max-width: 500rem;
+			height: 100%;
+			max-height: 450rem;
+		}
+
+		@include tablet-small{
+			max-width: 450rem;
 		}
 
 		@include mobile {
 			max-width: 350rem;
-			padding: 25rem;
+			height: 340rem;
+			
 		}
 
 		&__img-container {
@@ -59,10 +70,6 @@
 
 			@include desktop-small {
 				height: 200rem;
-			}
-
-			@include tablet {
-				height: 230rem;
 			}
 
 			@include mobile {
@@ -83,6 +90,7 @@
 			@include tablet {
 				transform: none;
 			}
+			
 		}
 
 		&-title {

@@ -26,6 +26,11 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
+
+		<!-- AOS library -->
+		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 		<link rel="stylesheet" href="style.css" />
 	</head>
 
@@ -55,7 +60,7 @@
 						<button class="btn header__small-btn" onclick="downloadCV()">
 							<span class="material-symbols-outlined"> download </span>CV
 						</button>
-						
+
 						<span class="material-icons icon-close" onclick="navToggle()"
 							>close</span
 						>
@@ -69,12 +74,11 @@
 					<button class="btn header__btn" onclick="downloadCV()">
 						Download CV
 					</button>
-					
 				</div>
 			</div>
 		</header>
 
-		<section class="home">
+		<section class="home" data-aos="fade-right" data-aos-delay="200">
 			<div class="container home__container">
 				<div class="home__info">
 					<div class="home__preview">
@@ -193,7 +197,7 @@
 			</div>
 		</section>
 
-		<section class="about anim" id="about">
+		<section class="about" id="about" data-aos="fade-up" data-aos-delay="100">
 			<div class="about__bg">
 				<div class="container about__container">
 					<h2 class="title"><span>About Me</span></h2>
@@ -209,7 +213,7 @@
 						photography!
 					</p>
 
-					<div class="about__statistics">
+					<div class="about__statistics" data-aos="fade-up">
 						<div class="about__group">
 							<p class="about__num">8</p>
 							<p class="about__num-desc">Clients Served</p>
@@ -229,7 +233,7 @@
 			</div>
 		</section>
 
-		<section class="services anim" id="services">
+		<section class="services" id="services" data-aos="fade-up" data-aos-delay="100">
 			<div class="services__bg">
 				<div class="container services__container">
 					<h2 class="title">Services</h2>
@@ -238,7 +242,7 @@
 						websites.
 					</p>
 
-					<div class="services__group">
+					<div class="services__group" data-aos="zoom-out">
 						<div class="services__block">
 							<img src="img/icons/responsive_icon.svg" alt="" class="icon" />
 							<h3 class="services__block-title">Responsive Design</h3>
@@ -268,7 +272,7 @@
 			</div>
 		</section>
 
-		<section class="skills anim" id="skills">
+		<section class="skills anim" id="skills" data-aos="fade-up" data-aos-delay="100">
 			<div class="container skills__container">
 				<h2 class="title"><span>Skills</span></h2>
 				<p class="desc">
@@ -279,44 +283,44 @@
 				</p>
 
 				<div class="skills__group">
-					<div class="skills__block">
+					<div class="skills__block" data-aos="flip-up">
 						<img src="img/icons/html.svg" alt="Html" class="icon" />
 
 						<p class="skills__block-title">HTML5</p>
 					</div>
 
-					<div class="skills__block">
+					<div class="skills__block" data-aos="flip-up" data-aos-delay="100">
 						<img src="img/icons/css.svg" alt="Css" class="icon" />
 						<p class="skills__block-title">CSS3</p>
 					</div>
 
-					<div class="skills__block">
+					<div class="skills__block" data-aos="flip-up" data-aos-delay="200">
 						<img src="img/icons/sass.svg" alt="Sass" class="icon" />
 						<p class="skills__block-title">Sass</p>
 					</div>
 
-					<div class="skills__block">
+					<div class="skills__block" data-aos="flip-up" data-aos-delay="300">
 						<img src="img/icons/gulp.svg" alt="Gulp" class="icon" />
 						<p class="skills__block-title">Gulp</p>
 					</div>
 
-					<div class="skills__block">
+					<div class="skills__block" data-aos="flip-up">
 						<img src="img/icons/js.svg" alt="JavaScript" class="icon" />
 						<p class="skills__block-title">JavaScript</p>
 					</div>
 
-					<div class="skills__block">
+					<div class="skills__block" data-aos="flip-up" data-aos-delay="100">
 						<img src="img/icons/vue.svg" alt="Vue.js" class="icon" />
 
 						<p class="skills__block-title">Vue.js</p>
 					</div>
 
-					<div class="skills__block">
+					<div class="skills__block" data-aos="flip-up" data-aos-delay="200">
 						<img src="img/icons/react.svg" alt="React.js" class="icon" />
 						<p class="skills__block-title">React.js</p>
 					</div>
 
-					<div class="skills__block">
+					<div class="skills__block" data-aos="flip-up" data-aos-delay="300">
 						<img src="img/icons/git.svg" alt="Github" class="icon" />
 						<p class="skills__block-title">Github</p>
 					</div>
@@ -324,7 +328,7 @@
 			</div>
 		</section>
 
-		<section class="projects anim" id="projects">
+		<section class="projects" id="projects" data-aos="fade-up" data-aos-delay="100">
 			<div class="projects__bg">
 				<div class="container projects__container">
 					<h2 class="title">Projects</h2>
@@ -333,7 +337,7 @@
 						dedication to creating impactful web experiences.
 					</p>
 					<div class="projects__group">
-						<div class="projects__item" data-category="vue">
+						<div class="projects__item" data-category="vue" data-aos="zoom-out">
 							<a
 								href="https://odrryl.github.io/Skilline-Website/"
 								target="_blank"
@@ -355,7 +359,7 @@
 							</a>
 						</div>
 
-						<div class="projects__item" data-category="vanilla">
+						<div class="projects__item" data-category="vanilla" data-aos="zoom-out" data-aos-delay="100">
 							<a href="https://odrryl.github.io/Bespoke/" target="_blank">
 								<div class="projects__item__img-container">
 									<img src="img/bespoke.png" alt="Preview" />
@@ -374,7 +378,7 @@
 							</a>
 						</div>
 
-						<div class="projects__item" data-category="react">
+						<div class="projects__item" data-category="react" data-aos="zoom-out">
 							<a href="https://odrryl.github.io/TammyFood/" target="_blank">
 								<div class="projects__item__img-container">
 									<img src="img/tammy.png" alt="Preview" />
@@ -393,7 +397,7 @@
 							</a>
 						</div>
 
-						<div class="projects__item" data-category="react">
+						<div class="projects__item" data-category="react" data-aos="zoom-out" data-aos-delay="100">
 							<a href="#" target="_blank">
 								<div class="projects__item__img-container">
 									<img src="img/coming-soon.jpg" alt="Preview" />
@@ -417,7 +421,7 @@
 			</div>
 		</section>
 
-		<footer class="footer" id="contact">
+		<footer class="footer" id="contact" data-aos="fade-up" data-aos-delay="100">
 			<div class="footer__bg">
 				<div class="container footer__container">
 					<h2 class="title"><span>Ways To Contact Me</span></h2>
@@ -427,23 +431,21 @@
 					</p>
 
 					<div class="footer__contacts">
-						
-
-						<div class="contact">
+						<div class="contact" data-aos="fade-up">
 							<img src="img/icons/tel.svg" alt="" class="contact__icon" />
 							<a class="contact__desc" href="tel:+40726481211"
 								>+(40)726-481-211</a
 							>
 						</div>
 
-						<div class="contact">
+						<div class="contact" data-aos="fade-up">
 							<img src="img/icons/tel.svg" alt="" class="contact__icon" />
 							<a class="contact__desc" href="tel:+380509842967"
 								>+(380)509-842-967</a
 							>
 						</div>
 
-						<div class="contact">
+						<div class="contact" data-aos="fade-up">
 							<img src="img/icons/email.svg" alt="" class="contact__icon" />
 							<a class="contact__desc" href="mailto:daryna.pavlenk007@gmail.com"
 								>daryna.pavlenk007@gmail.com</a
@@ -451,7 +453,7 @@
 						</div>
 					</div>
 
-					<div class="footer__socials">
+					<div class="footer__socials" data-aos="fade-up" data-aos-delay="200">
 						<a
 							href="https://www.linkedin.com/in/daryna-pavlenko-363157303/"
 							class="footer__link"
@@ -541,7 +543,7 @@
 						</a>
 					</div>
 
-					<a class="up" href="#home"
+					<a class="up" href="#home" data-aos="fade-up" data-aos-delay="300"
 						><img src="img/icons/up_arrow.svg" alt="Up" class="icon"
 					/></a>
 				</div>
@@ -555,6 +557,7 @@
 
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="./js/index.bundle.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 		<script src="script.js"></script>
 	</body>
 </html>

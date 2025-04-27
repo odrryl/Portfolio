@@ -88,6 +88,7 @@
 	}
 
 	&__btn {
+		transition: var(--transition);
 		animation: pulse 2s infinite;
 
 		@keyframes pulse {
@@ -95,7 +96,7 @@
 				box-shadow: 0 0 0rem 0 #ef474da8;
 			}
 			50% {
-				box-shadow: 0 0 35rem 0 #ef474da8;
+				box-shadow: 0 0 30rem 0 #ef474da8;
 			}
 			100% {
 				box-shadow: 0 0 0rem 0 #ef474da8;
