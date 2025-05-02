@@ -40,12 +40,12 @@
 		box-shadow: 0 0 50rem 0 #ef474da8;
 		padding: 85rem 45rem 65rem 45rem;
 		border-radius: 30rem;
-		transition: background-color 0.5s ease-in-out;
 		background: var(--primary-color);
 		width: 100%;
 		max-width: 400rem;
 		flex: 1 1 400rem;
 		box-sizing: border-box;
+		transition: background-color 0.5s ease-in-out;
 
 		@include desktop-small {
 			padding: 65rem 25rem 45rem 25rem;
