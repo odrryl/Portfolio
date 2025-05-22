@@ -99,3 +99,37 @@ AOS.init({
     once: false,    
     mirror: true,   
   });
+
+//NUMBERS ANIMATION
+
+function animateNumber(el, target, duration = 3000) {
+	const start = 0;
+	const isFloat = target.includes('.') || target.includes(',');
+	const targetNum = parseFloat(target.replace(',', '.'));
+	const startTime = performance.now();
+
+	function update(currentTime) {
+		const elapsed = currentTime - startTime;
+		const progress = Math.min(elapsed / duration, 1);
+		const value = isFloat
+			? (targetNum * progress).toFixed(1)
+			: Math.floor(targetNum * progress);
+		el.textContent = value.toString().replace('.', ',');
+
+		if (progress < 1) {
+			requestAnimationFrame(update);
+		}
+	}
+
+	requestAnimationFrame(update);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+	const elements = document.querySelectorAll(".about__num");
+
+	elements.forEach(el => {
+		const target = el.textContent.trim();
+		el.textContent = "0";
+		animateNumber(el, target);
+	});
+});

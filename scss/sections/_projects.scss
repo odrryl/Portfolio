@@ -37,7 +37,9 @@
 		width: 100%;
 		border-radius: 30rem;
 
-		box-shadow: 0 0 40rem 0 #ef474da8;
+		border-bottom: 3rem solid var(--accent-color-primary);
+		border-top: 1rem solid var(--accent-color-primary);
+		box-shadow: 0 4rem 20rem 0 #ef474da8;
 
 		transition: opacity 0.3s ease, transform 0.3s ease;
 
@@ -56,9 +58,11 @@
 		}
 
 		@include mobile {
+			padding: 20rem;
 			max-width: 350rem;
 			height: 340rem;
-			
+		
+			box-shadow: 0 4rem 20rem 0 #ef474da8;
 		}
 
 		&__img-container {
@@ -141,7 +145,7 @@
 			@include mobile {
 				flex-direction: column;
 				align-items: flex-start;
-				gap: 15rem;
+				gap: 20rem;
 			}
 		}
 
@@ -160,7 +164,7 @@
 			text-decoration-skip-ink: none;
 
 			@include mobile {
-				align-self: flex-end;
+				align-self: center;
 			}
 		}
 	}
